@@ -36,6 +36,7 @@ print('Options Loaded')
 browser = webdriver.Firefox(executable_path=r'geckodriver-linux', options=options)
 # browser = webdriver.Safari()  # for macOS users[for others use chrome vis chromedriver]
 # browser = webdriver.Chrome()	#uncomment this line,for chrome users
+print('Browser Loaded')
 browser.get(website_link)
 time.sleep(3)
 print('Sleeping for 3 seconds ... ')
