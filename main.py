@@ -29,14 +29,16 @@ element_for_submit = "Continue"
 ###########################################################
 options = Options()
 # options.binary_location = r'C:\Program Files\Mozilla Firefox\firefox.exe'
-options.binary_location = r'C:\Program Files\Mozilla Firefox\firefox.exe'
+# options.binary_location = r'C:\Program Files\Mozilla Firefox\firefox.exe'
 options.headless = True
+print('Options Loaded')
 # browser = webdriver.Firefox(executable_path=r'geckodriver.exe', options=options)
 browser = webdriver.Firefox(executable_path=r'geckodriver-linux', options=options)
 # browser = webdriver.Safari()  # for macOS users[for others use chrome vis chromedriver]
 # browser = webdriver.Chrome()	#uncomment this line,for chrome users
 browser.get(website_link)
 time.sleep(3)
+print('Sleeping for 3 seconds ... ')
 
 try:
     username_element = browser.find_element(by=By.NAME, value=element_for_username)
